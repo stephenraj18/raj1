@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+int add(int n,int a)
+{
+	
+	return n+a;
+}
+int sub(int a,int b)
+{
+	return a-b;
+}
+int mul(int a,int b)
+{
+	return a*b;
+}
+int divi(int a,int b)
+{
+	return a/b;
+}
+int main()
+{
+	int choice;
+	do{
+	int a,b;
+	printf("\tenter the choice");
+	printf("\n1-add \n2-subraction\n3-multiplication\n4-division");
+	scanf("%d",&choice);
+	printf("enter the two nums");
+	scanf("%d%d",&a,&b); 
+ switch(choice)
+ {
+  case 1:{
+	  printf("%d",add(a,b));
+	  break;
+	 }
+ case 2:{
+         printf("%d",sub(a,b));
+	 break;
+	}
+ case 3:{
+	 printf("%d",mul(a,b));
+        break;
+	}
+ case 4:{
+        printf("%d",divi(a,b));
+	break;
+	}
+ case 5:{
+	exit(1);
+	break;
+	}
+ }
+	}
+ while(choice>0&&choice<6);
+}
