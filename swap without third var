@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+	int a,b;
+	printf("enter two nums:");
+	scanf("%d%d",&a,&b);
+	printf("a=%d\nb=%d",a,b);
+	a=b*a;
+	b=a/b;
+	a=a/b;
+	printf("\nafter swap:a=%d\nb=%d\n",a,b);
+}
