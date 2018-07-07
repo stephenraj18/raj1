@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+float calcSurfaceArea(float a)
+{
+	float z,y;
+	z=pow(a,2);
+	z=z*6;
+	return z;
+}
+float vol(float a)
+{
+	float z;
+	z=pow(a,3);
+	return z;
+}
+float main()
+{
+	float a,z,x;
+	printf("enter the squares width");
+	scanf("%f",&a);
+	z=calcSurfaceArea(a);
+	printf("\nsurarea:%f",z);
+	x=vol(a);
+	printf("\nvol:%f",x);
+}
+
