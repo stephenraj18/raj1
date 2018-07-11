@@ -1,0 +1,51 @@
+# raj1
+#include<stdio.h>
+#include<string.h>
+typedef struct login
+{
+	long int accno;
+	int pin;
+        int amountdeposit;
+}login;
+login setaccount()
+{
+  login i;
+  printf("\naccno:");
+  scanf("%d",&i.accno);
+  printf("\npin:");
+  scanf("%d",&i.pin);
+  printf("\nenter amt to deposit");
+  scanf("%d",&i.amountdeposit);
+  return i;
+}
+void widdraw(login i)
+{
+	int c,b;
+	long int a;
+	printf("\nenter acc no:");
+	scanf("%d",&a);
+	printf("\nenter pin:");
+	scanf("%d",&b);
+	if(i.pin==b&&i.accno==a)
+	{
+		printf("\namount wanted:");
+		scanf("%d",&c);
+		if(c<i.amountdeposit&&c<50000&&c>0)
+		{
+		i.amountdeposit=i.amountdeposit-c;
+		printf("\nbalance:%d",i.amountdeposit);
+		}
+		else
+			printf("\ninsufficient balance");
+	}
+	else
+		printf("\nunauthorised user");
+}
+void main()
+{
+	login a;
+	a=setaccount();
+	widdraw(a);
+}
+
+	
